@@ -1,6 +1,6 @@
 """generate.py
 
-STARTER CODE VERSION <- replace with "Version by " [your name]
+Version by Shinji Yamashita
 
 This will generate messages randomly, using the given grammar and vocabulary.
 Orignally created, Sept. 12, 2023.
@@ -40,6 +40,8 @@ def show_word_groups():
         print(WORD_GROUPS[k])
 
 RULE_GROUPS = RuleGroup.groups
+show_word_groups()
+print(RuleGroup)
 
 # Function to generate some text starting with a particular construct,
 # such as MESSAGE, VERB_PHRASE, or ADJECTIVE.
@@ -51,6 +53,16 @@ def gen_text(construct):
     # if is in vocab.POS_KEYS.
 
     # (STUDENT CODE GOES HERE)
+    if construct in vocab.POS_KEYS:
+        chose_word = WORD_GROUPS.get(construct)
+        chose_word.choose(CHOICE_MODE)
+    
+        
+        
+
+        
+
+
 
     # If so, return a chosen word from the appropriate word group.
     #  (Get the appropriate word group, and then call its 'choose' method.)

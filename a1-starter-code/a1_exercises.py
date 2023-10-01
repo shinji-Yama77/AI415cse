@@ -1,6 +1,5 @@
 import math
-import string
-
+import re
 def is_a_triple(n):
     """Return True if n is a multiple of 3; False otherwise."""
     if (n % 3 == 0):
@@ -21,9 +20,6 @@ def check_prime(n):
             return False
     return True
 
-
-
-    
 
 
 def quadratic_roots(a, b, c):
@@ -107,14 +103,25 @@ def count_words(text):
     '-', '+', *', '/', '@', '#', '%', and "'" separated by whitespace,
     newlines, and/or punctuation (characters like . , ; ! ? & ( ) [ ] { } | : ).
     Convert all the letters to lower-case before the counting."""
-    # use regex
+    # convert letters to lowercase
     lower_case_text = text.lower()
-    white_space_removed = lower_case_text.split()
+    # should match on anything else except these what counts as word 
+    # using negation in regex
+    
+    delimiters = r'[^a-z0-9\-\+\*\'/@#%]+' 
+    clean = re.split(delimiters, lower_case_text)
+    print(clean)
+    # only preserve the words if there it isn't empty in list
+    result = [s for s in re.split(delimiters, lower_case_text) if s]
     dict1 = {}
-    for word in white_space_removed:
+    for word in result:
         if word in dict1:
             dict1[word] += 1
         else:
             dict1[word] = 1
     return dict1
+
+
+
+    
 
