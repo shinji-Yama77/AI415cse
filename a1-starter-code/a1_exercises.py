@@ -109,8 +109,6 @@ def count_words(text):
     # using negation in regex
     
     delimiters = r'[^a-z0-9\-\+\*\'/@#%]+' 
-    clean = re.split(delimiters, lower_case_text)
-    print(clean)
     # only preserve the words if there it isn't empty in list
     result = [s for s in re.split(delimiters, lower_case_text) if s]
     dict1 = {}

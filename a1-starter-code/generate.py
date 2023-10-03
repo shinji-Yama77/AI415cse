@@ -41,7 +41,8 @@ def show_word_groups():
 
 RULE_GROUPS = RuleGroup.groups
 show_word_groups()
-print(RuleGroup)
+#print(RULE_GROUPS['NOUN_PHRASE'])
+#print(RULE_GROUPS['NOUN_PHRASE'].choose_first())
 
 # Function to generate some text starting with a particular construct,
 # such as MESSAGE, VERB_PHRASE, or ADJECTIVE.
@@ -51,28 +52,27 @@ def gen_text(construct):
 
     # Test whether the construct is a part of speech by seeing if
     # if is in vocab.POS_KEYS.
+    # If so, return a chosen word from the appropriate word group.
+    #  (Get the appropriate word group, and then call its 'choose' method.)
 
     # (STUDENT CODE GOES HERE)
     if construct in vocab.POS_KEYS:
         chose_word = WORD_GROUPS.get(construct)
-        chose_word.choose(CHOICE_MODE)
-    
-        
-        
+        text = chose_word.choose(CHOICE_MODE)
+        return text
+    else:
+        # get the appropriate word group by getting it's left hand side, rule group
+        word_group = RULE_GROUPS[construct].choose(CHOICE_MODE)
+        return " ".join([gen_text(word) for word in word_group.rhs])
 
-        
 
-
-
-    # If so, return a chosen word from the appropriate word group.
-    #  (Get the appropriate word group, and then call its 'choose' method.)
-    
-    # (STUDENT CODE GOES HERE)
 
     # Otherwise, get the rule group for this construct, and
     # then choose one of its rules.
     
     # (STUDENT CODE GOES HERE)
+
+
 
     # Next get the right-hand side (rhs) of this rule.
     # There will be one or more constructs in this rhs.
@@ -85,12 +85,10 @@ def gen_text(construct):
 
     # Then return the resulting string.
 
-    return text
-
 def gen_overall_message():
     # The overall text will be a concatenation of several messages.
     if CHOICE_MODE=='random':
-        n = 10  # Students: Replace this with code that
+        n = 7  # Students: Replace this with code that
         # sets n to a random integer between 1 and 8, inclusive.
 
     else:

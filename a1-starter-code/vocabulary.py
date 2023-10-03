@@ -34,7 +34,7 @@ class Words:
         # Assume items are equally likely.
         return random.choice(self.members)
         
-NOUN = ['guy', 'girl', 'boss', 'meeting', 'bike', 'turkey']
+NOUN = ['husky', 'jack_russel', 'labrador', 'retriever', 'bulldog', 'poodle', 'toys', 'towel']
 
 VERBI = ['went away', 'ranted', 'quit', 'fainted']
 
@@ -47,6 +47,8 @@ PREPOSITION = ['in', 'after', 'over', 'under', 'beyond', 'with']
 ADJECTIVE = ['humongous', 'mini', 'crazy', 'best']
 
 REACTION = ['lol', '+1', '--gr8', 'nice', '- sad', 'omg', '... bfd', 'idc', '(too bad)']
+
+ANIMAL_SOUND = ['arf', 'moo', 'meow', 'baa', 'neigh', 'cluck']
 
 POS_KEYS = ['NOUN', 'VERBI', 'VERBT', 'ADJECTIVE',
             'ADVERB', 'PREPOSITION', 'REACTION']
