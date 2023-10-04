@@ -48,7 +48,7 @@ show_word_groups()
 # such as MESSAGE, VERB_PHRASE, or ADJECTIVE.
 def gen_text(construct):
 
-    text = "a default value, which your code below should replace"
+    text = ""
 
     # Test whether the construct is a part of speech by seeing if
     # if is in vocab.POS_KEYS.

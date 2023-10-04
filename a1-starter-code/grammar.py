@@ -1,6 +1,6 @@
 """grammar.py
 
-STARTER CODE VERSION <- replace with "Version by " [your name]
+Version by Shinji Yamashita
 
 Defines classes for the various parts of speech
 and rules for constructing phrases.

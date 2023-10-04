@@ -1,6 +1,6 @@
 """vocabulary.py
 
-STARTER CODE VERSION <- replace with "Version by " [your name]
+Version by Shinji Yamashita
 
 Establishes the word categories and the words.
 The categories are used in the rules in grammar.py.
@@ -51,5 +51,5 @@ REACTION = ['lol', '+1', '--gr8', 'nice', '- sad', 'omg', '... bfd', 'idc', '(to
 ANIMAL_SOUND = ['arf', 'moo', 'meow', 'baa', 'neigh', 'cluck']
 
 POS_KEYS = ['NOUN', 'VERBI', 'VERBT', 'ADJECTIVE',
-            'ADVERB', 'PREPOSITION', 'REACTION']
+            'ADVERB', 'PREPOSITION', 'REACTION', 'ANIMAL_SOUND']
 
