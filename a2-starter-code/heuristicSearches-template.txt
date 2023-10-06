@@ -1,0 +1,60 @@
+NOTES: PLEASE USE THIS GENERAL FORMAT FOR YOUR REPORT.
+YOU CAN USE WORD OR SOME OTHER TEXT-PROCESSING TOOL
+OR JUST USE THIS TEMPLATE ADDING THE DATA WHERE NEEDED.
+PLEASE REMOVE THESE INSTRUCTIONS PRIOR TO CONVERTING
+TO PDF AND TURNING THIS IN.  BE SURE TO NAME THE NEW
+FILE PROPERLY, AS EXPLAINED IN THE A2 SPECIFICATION.
+
+A2_Report.pdf
+
+partner 1 firstname and lastname:
+partner 1 student number:
+partner 1 uwnetid: 
+
+partner 2 firstname and lastname:
+partner 2 student number:
+partner 2 uwnetid: 
+
+
+Assignment 2 Report -- Heuristic Search
+
+CSE 415: Introduction to Artificial Intelligence
+Autumn, 2023
+
+
+1. Results with Heuristics for the Eight Puzzle
+
+ Puzzle  Heuristic  Solved?  # Soln Edges  Soln Cost   # Expanded  Max OPEN
++------+-----------+-------+--------------+----------+------------+--------+
+|  A   | none (UCS)|   Y   |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  A   | Hamming   |   Y   |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  A   | Manhattan |   Y   |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  B   | none (UCS)|       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  B   | Hamming   |       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  B   | Manhattan |       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  C   | none (UCS)|       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  C   | Hamming   |       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  C   | Manhattan |       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  D   | none (UCS)|       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  D   | Hamming   |       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+|  D   | Manhattan |       |              |          |            |        |
++------+-----------+-------+--------------+----------+------------+--------+
+
+Puzzle A: [3,0,1,6,4,2,7,8,5]
+Puzzle B: [3,1,2,6,8,7,5,4,0]
+Puzzle C: [4,5,0,1,2,8,3,7,6]
+Puzzle D: [0,8,2,1,7,4,3,6,5]
+
+
+2. (Optional) Evaluating Our Custom Heuristics
