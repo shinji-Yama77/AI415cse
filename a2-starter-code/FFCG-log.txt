@@ -1,0 +1,273 @@
+
+ H on left:0
+ F on left:0
+ C on left:0
+ G on left:0
+   H on right:0
+   F on right:0
+   C on right:0
+   G on right:0
+ boat is on the left.
+
+
+Welcome to ItrDFS
+Initial State:
+
+ H on left:1
+ F on left:1
+ C on left:1
+ G on left:1
+   H on right:0
+   F on right:0
+   C on right:0
+   G on right:0
+ boat is on the left.
+
+len(OPEN)= 1; len(CLOSED)= 0; COUNT = 0
+OPEN is now: 
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:1
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:0
+ boat is on the right.
+
+len(OPEN)= 1; len(CLOSED)= 1; COUNT = 1
+OPEN is now: 
+ H on left:1
+ F on left:1
+ C on left:0
+ G on left:1
+   H on right:0
+   F on right:0
+   C on right:1
+   G on right:0
+ boat is on the left.
+
+len(OPEN)= 1; len(CLOSED)= 2; COUNT = 2
+OPEN is now: 
+ H on left:0
+ F on left:0
+ C on left:0
+ G on left:1
+   H on right:1
+   F on right:1
+   C on right:1
+   G on right:0
+ boat is on the right.
+, 
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:1
+ boat is on the right.
+
+len(OPEN)= 2; len(CLOSED)= 3; COUNT = 3
+OPEN is now: 
+ H on left:1
+ F on left:0
+ C on left:1
+ G on left:1
+   H on right:0
+   F on right:1
+   C on right:0
+   G on right:0
+ boat is on the left.
+, 
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:1
+ boat is on the right.
+
+len(OPEN)= 2; len(CLOSED)= 4; COUNT = 4
+OPEN is now: 
+ H on left:0
+ F on left:0
+ C on left:1
+ G on left:0
+   H on right:1
+   F on right:1
+   C on right:0
+   G on right:1
+ boat is on the right.
+, 
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:1
+ boat is on the right.
+
+len(OPEN)= 2; len(CLOSED)= 5; COUNT = 5
+OPEN is now: 
+ H on left:1
+ F on left:0
+ C on left:1
+ G on left:0
+   H on right:0
+   F on right:1
+   C on right:0
+   G on right:1
+ boat is on the left.
+, 
+ H on left:1
+ F on left:1
+ C on left:1
+ G on left:0
+   H on right:0
+   F on right:0
+   C on right:0
+   G on right:1
+ boat is on the left.
+, 
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:1
+ boat is on the right.
+
+len(OPEN)= 3; len(CLOSED)= 6; COUNT = 6
+OPEN is now: 
+ H on left:0
+ F on left:0
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:1
+   C on right:1
+   G on right:1
+ boat is on the right.
+, 
+ H on left:1
+ F on left:1
+ C on left:1
+ G on left:0
+   H on right:0
+   F on right:0
+   C on right:0
+   G on right:1
+ boat is on the left.
+, 
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:1
+ boat is on the right.
+
+len(OPEN)= 3; len(CLOSED)= 7; COUNT = 7
+Congratulations on successfully getting the fox, chicken, grain across the river!
+Solution path: 
+
+ H on left:1
+ F on left:1
+ C on left:1
+ G on left:1
+   H on right:0
+   F on right:0
+   C on right:0
+   G on right:0
+ boat is on the left.
+
+
+ H on left:0
+ F on left:1
+ C on left:0
+ G on left:1
+   H on right:1
+   F on right:0
+   C on right:1
+   G on right:0
+ boat is on the right.
+
+
+ H on left:1
+ F on left:1
+ C on left:0
+ G on left:1
+   H on right:0
+   F on right:0
+   C on right:1
+   G on right:0
+ boat is on the left.
+
+
+ H on left:0
+ F on left:0
+ C on left:0
+ G on left:1
+   H on right:1
+   F on right:1
+   C on right:1
+   G on right:0
+ boat is on the right.
+
+
+ H on left:1
+ F on left:0
+ C on left:1
+ G on left:1
+   H on right:0
+   F on right:1
+   C on right:0
+   G on right:0
+ boat is on the left.
+
+
+ H on left:0
+ F on left:0
+ C on left:1
+ G on left:0
+   H on right:1
+   F on right:1
+   C on right:0
+   G on right:1
+ boat is on the right.
+
+
+ H on left:1
+ F on left:0
+ C on left:1
+ G on left:0
+   H on right:0
+   F on right:1
+   C on right:0
+   G on right:1
+ boat is on the left.
+
+
+ H on left:0
+ F on left:0
+ C on left:0
+ G on left:0
+   H on right:1
+   F on right:1
+   C on right:1
+   G on right:1
+ boat is on the right.
+
+Length of solution path found: 7 edges
+Number of states expanded: 7
+Maximum length of the open list: 3
