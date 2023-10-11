@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ ItrBFS.py
 Student Name:
-UW NetID:
+UW NetID: Shinji Yamashita
 CSE 415, Autumn 2023, University of Washington
 
 This code contains my implementation of the Iterative BFS algorithm.
@@ -30,6 +30,7 @@ class ItrBFS:
         self.PATH = None  # Solution path
         self.PATH_LENGTH = None  # Length of the solution path
         self.BACKLINKS = None  # Predecessor links, used to recover the path
+        self.stateMAP = {}
         print("\nWelcome to ItrBFS")
 
     def runBFS(self):
@@ -53,6 +54,7 @@ class ItrBFS:
         OPEN = [initial_state]
         CLOSED = []
         self.BACKLINKS[initial_state] = None
+        self.stateMAP = {initial_state: 0}
 
         while OPEN != []:
             report(OPEN, CLOSED, self.COUNT)
@@ -83,10 +85,20 @@ class ItrBFS:
                     new_state = op.apply(S)
                     if not (new_state in CLOSED):
                         L.append(new_state)
-                        self.BACKLINKS[new_state] = S
+                        if new_state not in self.stateMAP:
+                            self.stateMAP[new_state] = self.stateMAP[S] + 1
+                            self.BACKLINKS[new_state] = S
+                        else:
+                            if self.stateMAP[S] + 1 < self.stateMAP[new_state]:
+                                self.stateMAP[new_state] = self.stateMAP[S] + 1
+                                self.BACKLINKS[new_state] = S
 
+
+ 
+                        
             # STEP 5. Delete from L any members of OPEN that occur on L.
             #         Insert all members of L at the back of OPEN.
+
             for s2 in OPEN:
                 for i in range(len(L)):
                     if s2 == L[i]:
@@ -147,3 +159,5 @@ if __name__ == '__main__':
         Problem = sys.argv[1]
     BFS = ItrBFS(Problem)
     BFS.runBFS()
+
+

@@ -22,8 +22,9 @@ def h(s):
     longitude1 = LONGITUDE[str(s)]  # Use of str means this will work
     # with either states or strings.
     longitude2 = LONGITUDE[str(DESTINATION_CITY)]
+    print(DESTINATION_CITY)
     dx = longitude1 - longitude2
     return 10.0 * abs(dx)
 
 # A simple test:
-# print(h('Nantes'))
+print(h('Nantes'))
