@@ -1,0 +1,6 @@
+I implemented alpha beta pruning in my K in a row file against another agent on and it off with a fixed depth
+of four. This optimization prunes trees where it is unnecessary for the minimizer or maximizer to search. I also sent an email to Professor Tanimoto explaining that I submitted basic materials on time and only the additional game scripts were late due to me not being able to find competitors which resulted in a two day late so it would only be counted as one day late!
+
+
+
+
