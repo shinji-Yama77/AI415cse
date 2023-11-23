@@ -78,8 +78,8 @@ class State():
     return news 
 
   def can_move(self,h,f,c,g):
-    '''Tests whether it's legal to move the ferry and take
-     h humans and r robots.'''
+    '''Tests whether it's legal to move the ferry with the farmer and
+    take a chicken, grain, or a fox.'''
     side = self.d['boat'] # Where the ferry is.
     p = self.d['agents']
     if h<1: return False # Need an H(farmer) to steer boat.

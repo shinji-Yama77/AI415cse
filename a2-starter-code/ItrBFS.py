@@ -30,7 +30,7 @@ class ItrBFS:
         self.PATH = None  # Solution path
         self.PATH_LENGTH = None  # Length of the solution path
         self.BACKLINKS = None  # Predecessor links, used to recover the path
-        self.stateMAP = {}
+        self.stateMAP = {} # storing the edge costs to that node
         print("\nWelcome to ItrBFS")
 
     def runBFS(self):
@@ -85,6 +85,7 @@ class ItrBFS:
                     new_state = op.apply(S)
                     if not (new_state in CLOSED):
                         L.append(new_state)
+                        # see if we already have this state, and replace with shorter path if needed
                         if new_state not in self.stateMAP:
                             self.stateMAP[new_state] = self.stateMAP[S] + 1
                             self.BACKLINKS[new_state] = S

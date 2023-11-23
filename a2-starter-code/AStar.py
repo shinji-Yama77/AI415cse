@@ -105,7 +105,7 @@ class AStar:
             # STEP 4. Generate each successors of S and delete
             #         and if it is already on CLOSED, delete the new instance. self.g should be the node
             # associated with the edge cost in addition to the cost from the source to the previous node.
-            # Doesn't include the heuristic cost
+            # combined with heuristic cost
             gs = self.g[S]  # Save the cost of getting to S in a variable.
             for op in self.Problem.OPERATORS:
                 if op.is_applicable(S):
@@ -113,7 +113,8 @@ class AStar:
                     edge_cost = S.edge_distance(new_state)
                     new_f = gs + edge_cost + self.h(new_state)
                     if new_state in self.CLOSED:
-                        # print("Already have this state, in CLOSED. del ...")
+                        # see if the current combined cost of node is lower than the 
+                        # the previous path cost
                         P = self.g[new_state] + self.h(new_state)
                         if new_f < P:
                             self.CLOSED.remove(new_state)

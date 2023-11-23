@@ -1,0 +1,2 @@
+a) Shinji Yamashita and Shivansh Shekhar
+b) We worked on both A* and Eight puzzle heuristics together

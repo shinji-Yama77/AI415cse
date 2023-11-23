@@ -9,6 +9,7 @@ store_distance = {num: (i, j) for i, sublist in enumerate(GOAL_STATE) for j, num
 
 
 def h(puzzle_state):
+    ' returns the total cost of manhattan distance calculated by x and y'
     cost = 0
     s = puzzle_state.b
     for i, sublist in enumerate(s):

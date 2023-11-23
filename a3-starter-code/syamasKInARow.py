@@ -80,7 +80,7 @@ def makeMove(currentState, currentRemark, timeLimit=10000):
     if (generate_successors(currentState[0]) == 0):
         return [None, "utterance"]
     # get all possible moves from the current state
-    new_score, new_State = minimax(currentState, depthRemaining=2, start_time=start_time, pruning=True, alpha=float('-inf'), beta=float('inf'))
+    new_score, new_State = minimax(currentState, depthRemaining=3, start_time=start_time, pruning=True, alpha=float('-inf'), beta=float('inf'))
     newState = new_State
     #newRemark = make_remark(newState, prevState)
     move = get_move(currentState, new_State)
